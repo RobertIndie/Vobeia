@@ -1,0 +1,16 @@
+/Vobeia/.vs
+/Vobeia/Library
+/Vobeia/obj
+/Vobeia/Temp
+/Vobeia/Vobeia.csproj
+/Vobeia/Vobeia.sln
+/Vobeia/Assembly-CSharp.csproj
+/Vobeia/Vobeia.userprefs
+*.DS_Store
+*.pyc
+/Vobeia/Assets/XLua/Gen
+/Vobeia/Assets/XLua/Gen.meta
+
+Vobeia/Vobeia\.Editor\.csproj
+/Vobeia/Vobeia.Editor.Plugins.csproj
+/Vobeia/Vobeia.Plugins.csproj
