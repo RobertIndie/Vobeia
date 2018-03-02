@@ -42,7 +42,9 @@ public class BlockManager
                 textures.Add(blockTexture);
             }
         }
-        ((Texture2D)material.mainTexture).PackTextures(textures.ToArray(), 0);
+        Texture2D mainTexture = ((Texture2D)material.mainTexture);
+        mainTexture.PackTextures(textures.ToArray(), 0);
+        mainTexture.filterMode = FilterMode.Point;
         this.material = material;
     }
 }

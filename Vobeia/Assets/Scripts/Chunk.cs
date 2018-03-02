@@ -194,8 +194,8 @@ public class Chunk : MonoBehaviour {
         verts.Add(corner + up + right);
         verts.Add(corner + right);
 
-        Vector2 uvWidth = new Vector2(0.25f, 0.25f);
-        Vector2 uvCorner = new Vector2(0.00f, 0.75f);
+        Vector2 uvWidth = new Vector2(1.00f, 1.00f);
+        Vector2 uvCorner = new Vector2(0.00f, 1.00f);
         uvCorner.x += (float)(brick - 1) / 4;
 
         uvs.Add(uvCorner);
