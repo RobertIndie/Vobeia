@@ -26,14 +26,13 @@ public class Chunk : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
         chunks.Add(this);
 
         meshRenderer = GetComponent<MeshRenderer>();
         meshCollider = GetComponent<MeshCollider>();
         meshFilter = GetComponent<MeshFilter>();
 
-
+        meshRenderer.material = BlockManager.instance.material;
 
         CalculateMapFromScratch();
         StartCoroutine(CreateVisualMesh());
@@ -84,7 +83,7 @@ public class Chunk : MonoBehaviour {
 
         mountainValue += (blobValue * 10) - 5f;
 
-
+        
 
         if (mountainValue >= pos.y)
             return brick;
@@ -194,11 +193,15 @@ public class Chunk : MonoBehaviour {
         verts.Add(corner + up);
         verts.Add(corner + up + right);
         verts.Add(corner + right);
+        
+        Rect uvRect = BlockManager.instance.rectDict[(byte)(brick - 1)];
 
-        Vector2 uvWidth = new Vector2(0.25f, 0.25f);
-        Vector2 uvCorner = new Vector2(0.00f, 0.75f);
+        //Vector2 uvWidth = new Vector2(1.00f/BlockManager.instance.textureCount, 1.00f);
+        //Vector2 uvCorner = new Vector2(0.00f, 0.00f);
+        //uvCorner.x += (float)(brick - 1) / BlockManager.instance.textureCount;
 
-        uvCorner.x += (float)(brick - 1) / 4;
+        Vector2 uvCorner = new Vector2(uvRect.x, uvRect.y);
+        Vector2 uvWidth = new Vector2(uvRect.width, uvRect.height);
 
         uvs.Add(uvCorner);
         uvs.Add(new Vector2(uvCorner.x, uvCorner.y + uvWidth.y));
