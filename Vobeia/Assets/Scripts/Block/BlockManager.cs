@@ -22,6 +22,7 @@ public class BlockManager
         //空气方块不需要注册，其id为0
         byte id = 0;
         instance.Register(++id, new GrassBlock());
+        instance.Register(++id, new StoneBlock());
     }
     public Material material;
     public int textureCount = 0;//这样就不会频繁使用blockDict.Count了
