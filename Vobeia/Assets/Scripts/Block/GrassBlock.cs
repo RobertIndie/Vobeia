@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GrassBlock : Block {
-    
+    public GrassBlock()
+    {
+        name = "Grass";
+    }
 	// Use this for initialization
 	void Start () {
 		

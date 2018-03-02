@@ -84,7 +84,7 @@ public class Chunk : MonoBehaviour {
 
         mountainValue += (blobValue * 10) - 5f;
 
-
+        
 
         if (mountainValue >= pos.y)
             return brick;
