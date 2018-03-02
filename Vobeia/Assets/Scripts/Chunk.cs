@@ -193,10 +193,15 @@ public class Chunk : MonoBehaviour {
         verts.Add(corner + up);
         verts.Add(corner + up + right);
         verts.Add(corner + right);
+        
+        Rect uvRect = BlockManager.instance.rectDict[(byte)(brick - 1)];
 
-        Vector2 uvWidth = new Vector2(1.00f/BlockManager.instance.textureCount, 1.00f);
-        Vector2 uvCorner = new Vector2(0.00f, 0.00f);
-        uvCorner.x += (float)(brick - 1) / BlockManager.instance.textureCount;
+        //Vector2 uvWidth = new Vector2(1.00f/BlockManager.instance.textureCount, 1.00f);
+        //Vector2 uvCorner = new Vector2(0.00f, 0.00f);
+        //uvCorner.x += (float)(brick - 1) / BlockManager.instance.textureCount;
+
+        Vector2 uvCorner = new Vector2(uvRect.x, uvRect.y);
+        Vector2 uvWidth = new Vector2(uvRect.width, uvRect.height);
 
         uvs.Add(uvCorner);
         uvs.Add(new Vector2(uvCorner.x, uvCorner.y + uvWidth.y));

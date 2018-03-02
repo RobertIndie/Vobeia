@@ -7,6 +7,7 @@ public class BlockManager
 {
     public static BlockManager instance = new BlockManager();
     public Dictionary<byte, Block> blockDict = new Dictionary<byte, Block>();
+    public Dictionary<byte, Rect> rectDict = new Dictionary<byte, Rect>();
     /// <summary>
     /// 注册方块
     /// </summary>
@@ -23,6 +24,7 @@ public class BlockManager
         byte id = 0;
         instance.Register(++id, new GrassBlock());
         instance.Register(++id, new StoneBlock());
+        instance.Register(++id, new SandBlock());
     }
     public Material material;
     public int textureCount = 0;//这样就不会频繁使用blockDict.Count了
@@ -30,8 +32,6 @@ public class BlockManager
     {
         material.mainTexture = new Texture2D(0, 0);
         List<Texture2D> textures = new List<Texture2D>();
-        int width = blockDict.Count * 16;
-        int height = 16;
         textureCount = blockDict.Count;
         foreach(Block block in blockDict.Values)
         {
@@ -44,7 +44,12 @@ public class BlockManager
             }
         }
         Texture2D mainTexture = ((Texture2D)material.mainTexture);
-        mainTexture.PackTextures(textures.ToArray(), 0);
+        Rect[] rects = mainTexture.PackTextures(textures.ToArray(), 0);
+        for (int i = 0; i < rects.Length; i++) 
+        {
+            if (rects[i] == null) throw new Exception("资源导入失败:" + i);
+            rectDict.Add((byte)i, rects[i]);
+        }
         mainTexture.filterMode = FilterMode.Point;
         this.material = material;
     }
