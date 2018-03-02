@@ -15,7 +15,7 @@ public class Block : MonoBehaviour {
     /// 实体在生成场景的时候会被实例化
     /// </summary>
     public bool isEntity = true;
-    public string name = "";
+    public string blockName = "";
 	// Use this for initialization
 	void Start () {
 		

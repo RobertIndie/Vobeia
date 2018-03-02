@@ -5,7 +5,7 @@ using UnityEngine;
 public class GrassBlock : Block {
     public GrassBlock()
     {
-        name = "Grass";
+        blockName = "Grass";
     }
 	// Use this for initialization
 	void Start () {

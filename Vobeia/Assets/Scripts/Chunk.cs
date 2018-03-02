@@ -26,14 +26,13 @@ public class Chunk : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
         chunks.Add(this);
 
         meshRenderer = GetComponent<MeshRenderer>();
         meshCollider = GetComponent<MeshCollider>();
         meshFilter = GetComponent<MeshFilter>();
 
-
+        meshRenderer.material = BlockManager.instance.material;
 
         CalculateMapFromScratch();
         StartCoroutine(CreateVisualMesh());
@@ -197,7 +196,6 @@ public class Chunk : MonoBehaviour {
 
         Vector2 uvWidth = new Vector2(0.25f, 0.25f);
         Vector2 uvCorner = new Vector2(0.00f, 0.75f);
-
         uvCorner.x += (float)(brick - 1) / 4;
 
         uvs.Add(uvCorner);
