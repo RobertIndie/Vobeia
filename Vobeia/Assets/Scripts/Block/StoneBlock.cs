@@ -6,6 +6,10 @@ public class StoneBlock : Block {
     public StoneBlock()
     {
         blockName = "Stone";
+        materials = new List<string>()
+        {
+            "Stone"
+        };
     }
 	// Use this for initialization
 	void Start () {

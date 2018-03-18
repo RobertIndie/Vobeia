@@ -16,6 +16,7 @@ public class Block : MonoBehaviour {
     /// </summary>
     public bool isEntity = true;
     public string blockName = "";
+    public List<string> materials = new List<string>();
 	// Use this for initialization
 	void Start () {
 		

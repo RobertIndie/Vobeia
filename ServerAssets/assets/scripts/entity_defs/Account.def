@@ -1,0 +1,71 @@
+<root>
+	<Properties>
+		<Lobby>
+			<Type> ENTITYCALL </Type>
+			<Flags> BASE </Flags>
+		</Lobby>
+		<Room>
+			<Type> ENTITYCALL </Type>
+			<Flags> BASE </Flags>
+		</Room>
+	</Properties>
+
+	<ClientMethods>
+		<enterLobby>
+			<Arg> UNICODE </Arg><!--LobbyName-->
+		</enterLobby>
+		<!--房间-->
+		<onReceiveRoomList>
+			<Arg> ROOM_LIST </Arg>
+		</onReceiveRoomList>
+		<onCreateRoomResult>
+			<Arg> RESULT_STATUS </Arg>
+		</onCreateRoomResult>
+		<onEnterRoomResult>
+			<Arg> RESULT_STATUS </Arg>
+		</onEnterRoomResult>
+		<onReceiveRoomInfo>
+			<Arg> ROOM_DETAIL_INFO </Arg>
+		</onReceiveRoomInfo>
+		<!---->
+	</ClientMethods>
+
+	<BaseMethods>
+		<!--房间-->
+		<requestGetRoomList><!--onReceiveRoomList Lobby-->
+			<Exposed/>
+		</requestGetRoomList>
+		<requestCreateRoom><!--onCreateRoomResult Lobby-->
+			<Arg> UNICODE </Arg><!--RoomName-->
+			<Exposed/>
+		</requestCreateRoom>
+		<requestEnterRoom><!--onEnterRoomResult Room-->
+			<Arg> ROOM_ID </Arg>
+			<Exposed/>
+		</requestEnterRoom>
+		<requestExitRoom><!--Room-->
+			<Exposed/>
+		</requestExitRoom>
+		<requestGetRoomInfo><!--onReceiveRoomInfo Room-->
+			<Exposed/>
+		</requestGetRoomInfo>
+		<!---->
+
+		<!--Callbacks from Lobby-->
+		<onCreateRoomResult>
+			<Arg> RESULT_STATUS </Arg>
+			<Arg> ENTITYCALL </Arg><!--Room-->
+		</onCreateRoomResult>
+		<!---->
+		<!--Callbacks from Room-->
+		<onEnterRoomResult>
+			<Arg> RESULT_STATUS </Arg>
+			<Arg> ENTITYCALL </Arg><!--Room-->
+		</onEnterRoomResult>
+		<!---->
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>

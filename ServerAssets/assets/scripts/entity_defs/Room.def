@@ -1,0 +1,42 @@
+<root>
+	<Properties>
+        <ID>
+            <Type> ROOM_ID </Type>
+            <Flags> BASE </Flags>
+        </ID>
+        <Name>
+            <Type>  UNICODE  </Type>
+            <Flags>  BASE  </Flags>
+        </Name>
+        <Lobby>
+            <Type> ENTITYCALL </Type>
+            <Flags> BASE </Flags>
+        </Lobby>
+        <Players>
+            <Type> ENTITY_ARRAY </Type>
+            <Flags> BASE </Flags>
+        </Players>
+        <Creator>
+            <Type> ENTITYCALL </Type>
+            <Flags> BASE </Flags>
+        </Creator>
+	</Properties>
+
+	<ClientMethods>
+	</ClientMethods>
+
+	<BaseMethods>
+        <!--Calls from Account-->
+        <requestEnterRoom>
+            <Arg> ENTITYCALL </Arg>
+        </requestEnterRoom>
+        <requestExitRoom>
+            <Arg> ENTITYCALL </Arg>
+        </requestExitRoom>
+        <!---->
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>

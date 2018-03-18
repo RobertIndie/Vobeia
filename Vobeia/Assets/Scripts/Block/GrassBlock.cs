@@ -6,6 +6,10 @@ public class GrassBlock : Block {
     public GrassBlock()
     {
         blockName = "Grass";
+        materials = new List<string>()
+        {
+            "Grass"
+        };
     }
 	// Use this for initialization
 	void Start () {

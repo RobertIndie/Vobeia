@@ -35,12 +35,14 @@ public class BlockManager
         textureCount = blockDict.Count;
         foreach(Block block in blockDict.Values)
         {
-            string blockName = block.blockName;
-            if (blockName!="")
+            foreach(string materialName in block.materials)
             {
-                Material blockMaterial = Resources.Load<Material>("materials/blocks/" + blockName);
-                Texture2D blockTexture = blockMaterial.mainTexture as Texture2D;
-                textures.Add(blockTexture);
+                if (materialName != "")
+                {
+                    Material blockMaterial = Resources.Load<Material>("materials/blocks/" + materialName);
+                    Texture2D blockTexture = blockMaterial.mainTexture as Texture2D;
+                    textures.Add(blockTexture);
+                }
             }
         }
         Texture2D mainTexture = ((Texture2D)material.mainTexture);

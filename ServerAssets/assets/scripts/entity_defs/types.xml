@@ -1,0 +1,66 @@
+<root>
+    <!--common-->
+    <RESULT_STATUS> UINT8 </RESULT_STATUS>
+    <ENTITY_ARRAY>
+        ARRAY
+        <of> ENTITYCALL </of>
+    </ENTITY_ARRAY>
+    <!---->
+    <!--玩家-->
+    <PLAYER_INFO>
+        FIXED_DICT
+        <Properties>
+            <name>
+                <Type> UNICODE </Type>
+            </name>
+        </Properties>
+    </PLAYER_INFO>
+
+    <PLAYER_LIST>
+        ARRAY
+        <of> PLAYER_INFO </of>
+    </PLAYER_LIST>
+    <!---->
+    <!--房间-->
+    <ROOM_ID> UINT16 </ROOM_ID>
+
+    <ROOM_INFO>
+        FIXED_DICT
+        <Properties>
+            <id>
+                <Type> ROOM_ID </Type>
+            </id>
+            <name>
+                <Type> UNICODE </Type>
+            </name>
+            <players_count>
+                <Type> UINT8 </Type>
+            </players_count>
+        </Properties>
+    </ROOM_INFO>
+
+    <ROOM_LIST>
+        ARRAY
+        <of> ROOM_INFO </of>
+    </ROOM_LIST>
+
+    <ROOM_DETAIL_INFO>
+        FIXED_DICT
+        <Properties>
+            <id>
+                <Type> ROOM_ID </Type>
+            </id>
+            <name>
+                <Type> UNICODE </Type>
+            </name>
+            <players_count>
+                <Type> UINT8 </Type>
+            </players_count>
+            <players>
+                <Type> PLAYER_LIST </Type>
+            </players>
+        </Properties>
+    </ROOM_DETAIL_INFO>
+    <!---->
+
+</root>
