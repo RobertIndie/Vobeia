@@ -1,0 +1,80 @@
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 948] - -----------------------------------------------------------------------------------------
+
+
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 948] - Resmgr::initialize: KBE_ROOT=E:/Ambicour/DeepSpace/ServerAssets/
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 949] - Resmgr::initialize: KBE_RES_PATH=E:/Ambicour/DeepSpace/ServerAssets/kbe/res/;E:/Ambicour/DeepSpace/ServerAssets/assets/;E:/Ambicour/DeepSpace/ServerAssets/assets/scripts/;E:/Ambicour/DeepSpace/ServerAssets/assets/res/
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 949] - Resmgr::initialize: KBE_BIN_PATH=E:/Ambicour/DeepSpace/ServerAssets/kbe/bin/server/
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 963] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.8.230 ( 192.168.8.230:63036 )
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 963] - NetworkInterface::initialize(INTERNAL): address 192.168.8.230:63036, SOMAXCONN=5.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 963] - server-configs:
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 963] - 	internalAddr : 192.168.8.230:63036
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:36 963] - 	componentID : 6000
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:38 483] - ---- cellappmgr Version: 1.1.0. ScriptVersion: 0.1.0. Protocol: 3D7D00E85F6164A582B0B8A83CA91BBC. Config: Debug X86. Built: 18:07:24 Feb  2 2018. AppID: 6000. UID: 10103. PID: 26332 ----
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:38 483] - Server : Intel(R) Core(TM) i5-6300HQ CPU @ 2.30GHz with 2097151kB RAM
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:38 483] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:38 483] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:38 897] - ---- cellappmgr is running ----
+   DEBUG cellappmgr-1 10103 6000  [2018-02-03 18:30:38 897] - Components::process(): Request for the process of identity...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 304] - Components::findComponents: find logger(1)...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 399] - Components::findComponents: found logger, addr:192.168.8.230:63042
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 399] - Components::addComponent: reset orderLog, uid=10103!
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 399] - Components::addComponent[logger], uid=10103, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 400] - Components::findComponents: find dbmgr(2)...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 505] - Components::findComponents: found dbmgr, addr:192.168.8.230:63039
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 505] - Components::addComponent: reset orderLog, uid=10103!
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 506] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:46 507] - Components::findComponents: found dbmgr, addr:192.168.8.230:63039
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:48 525] - Components::findComponents: find baseappmgr(1)...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:48 569] - Components::findComponents: found baseappmgr, addr:192.168.8.230:63035
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:48 569] - Components::addComponent[baseappmgr], uid=10103, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:48 570] - Components::findComponents: found baseappmgr, addr:192.168.8.230:63035
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:50 480] - ServerApp::onRegisterNewApp: uid:10103, username:, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.8.230, intport:63035, extaddr:nonsupport, extport:0,  from 192.168.8.230:63062/0/0/0.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:50 635] - Components::findComponents: register self to dbmgr...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:50 644] - Components::findComponents: register self to baseappmgr...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:50 658] - Components::process(): Found all the components!
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:53 264] - ServerApp::onRegisterNewApp: uid:10103, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.8.230, intport:63037, extaddr:nonsupport, extport:0,  from 192.168.8.230:63068/0/0/0.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:53 264] - Components::addComponent[cellapp], uid=10103, componentID=8001, globalorderid=3, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:53 308] - Cellappmgr::getCellapp: added new cellapp(8001).
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:54 084] - ServerApp::onRegisterNewApp: uid:10103, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.8.230, intport:63040, extaddr:192.168.8.230, extport:20015,  from 192.168.8.230:63073/0/0/0.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:30:54 084] - Components::addComponent[baseapp], uid=10103, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 354] - -----------------------------------------------------------------------------------------
+
+
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 354] - Resmgr::initialize: KBE_ROOT=E:/Ambicour/DeepSpace/ServerAssets/
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 355] - Resmgr::initialize: KBE_RES_PATH=E:/Ambicour/DeepSpace/ServerAssets/kbe/res/;E:/Ambicour/DeepSpace/ServerAssets/assets/;E:/Ambicour/DeepSpace/ServerAssets/assets/scripts/;E:/Ambicour/DeepSpace/ServerAssets/assets/res/
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 355] - Resmgr::initialize: KBE_BIN_PATH=E:/Ambicour/DeepSpace/ServerAssets/kbe/bin/server/
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 455] - NetworkInterface::initialize(INTERNAL): bound to all interfaces with default route interface on 192.168.8.230 ( 192.168.8.230:63086 )
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 455] - NetworkInterface::initialize(INTERNAL): address 192.168.8.230:63086, SOMAXCONN=5.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 455] - server-configs:
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 455] - 	internalAddr : 192.168.8.230:63086
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:02 455] - 	componentID : 6000
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:03 963] - ---- cellappmgr Version: 1.1.0. ScriptVersion: 0.1.0. Protocol: 3D7D00E85F6164A582B0B8A83CA91BBC. Config: Debug X86. Built: 18:07:24 Feb  2 2018. AppID: 6000. UID: 10103. PID: 42292 ----
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:03 964] - Server : Intel(R) Core(TM) i5-6300HQ CPU @ 2.30GHz with 2097151kB RAM
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:03 964] - ThreadPool::createThreadPool: creating  threadpool...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:03 964] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:04 451] - ---- cellappmgr is running ----
+   DEBUG cellappmgr-1 10103 6000  [2018-02-03 18:31:04 452] - Components::process(): Request for the process of identity...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:11 829] - Components::findComponents: find logger(1)...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:11 894] - Components::findComponents: found logger, addr:192.168.8.230:63079
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:11 894] - Components::addComponent: reset orderLog, uid=10103!
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:11 894] - Components::addComponent[logger], uid=10103, componentID=2000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:11 895] - Components::findComponents: find dbmgr(2)...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:12 000] - Components::findComponents: found dbmgr, addr:192.168.8.230:63085
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:12 000] - Components::addComponent: reset orderLog, uid=10103!
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:12 001] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:12 001] - Components::findComponents: found dbmgr, addr:192.168.8.230:63085
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:14 009] - Components::findComponents: find baseappmgr(1)...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:14 060] - Components::findComponents: found baseappmgr, addr:192.168.8.230:63082
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:14 060] - Components::addComponent[baseappmgr], uid=10103, componentID=5000, globalorderid=2, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:14 061] - Components::findComponents: found baseappmgr, addr:192.168.8.230:63082
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:15 749] - ServerApp::onRegisterNewApp: uid:10103, username:, componentType:baseappmgr, componentID:5000, globalorderID=-1, grouporderID=-1, intaddr:192.168.8.230, intport:63082, extaddr:nonsupport, extport:0,  from 192.168.8.230:63116/0/0/0.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:16 109] - Components::findComponents: register self to dbmgr...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:16 129] - Components::findComponents: register self to baseappmgr...
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:16 149] - Components::process(): Found all the components!
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:18 569] - ServerApp::onRegisterNewApp: uid:10103, username:, componentType:cellapp, componentID:8001, globalorderID=-1, grouporderID=-1, intaddr:192.168.8.230, intport:63084, extaddr:nonsupport, extport:0,  from 192.168.8.230:63126/0/0/0.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:18 569] - Components::addComponent[cellapp], uid=10103, componentID=8001, globalorderid=3, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:18 649] - Cellappmgr::getCellapp: added new cellapp(8001).
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:18 749] - ServerApp::onRegisterNewApp: uid:10103, username:, componentType:baseapp, componentID:7001, globalorderID=-1, grouporderID=-1, intaddr:192.168.8.230, intport:63081, extaddr:192.168.8.230, extport:20015,  from 192.168.8.230:63132/0/0/0.
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:18 749] - Components::addComponent[baseapp], uid=10103, componentID=7001, globalorderid=4, grouporderid=1, totalcount=1
+    INFO cellappmgr-1 10103 6000  [2018-02-03 18:31:23 069] - Cellappmgr::onCellappInitProgress: cid=8001, progress=1.
+   DEBUG cellappmgr-1 10103 6000  [2018-02-03 18:31:23 069] - Cellappmgr::addCellappComponentID: cellapp component id 8001, group order id 1

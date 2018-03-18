@@ -14,3 +14,7 @@
 Vobeia/Vobeia\.Editor\.csproj
 /Vobeia/Vobeia.Editor.Plugins.csproj
 /Vobeia/Vobeia.Plugins.csproj
+/ServerAssets/docs
+/ServerAssets/kbe
+/ServerAssets/.travis.yml
+/ServerAssets/appveyor.yml

@@ -1,0 +1,34 @@
+<root>
+	<Properties>
+        <LobbyName>
+            <Type>  UNICODE  </Type>
+            <Flags>  BASE  </Flags>
+        </LobbyName>
+        <Rooms>
+            <Type> ENTITYCALL </Type>
+            <Flags> BASE </Flags>
+        </Rooms>
+	</Properties>
+
+	<ClientMethods>
+	</ClientMethods>
+
+	<BaseMethods>
+        <enterLobby>
+            <Arg>  ENTITYCALL  </Arg>
+        </enterLobby>
+        <exitLobby>
+            <Arg> ENTITYCALL </Arg>
+        </exitLobby>
+        <!--房间-->
+        <requestCreateRoom>
+            <Arg> ENTITYCALL </Arg>
+            <Arg> UNICODE </Arg>
+        </requestCreateRoom>
+        <!---->
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>
