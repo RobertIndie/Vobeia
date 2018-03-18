@@ -18,3 +18,4 @@ Vobeia/Vobeia\.Editor\.csproj
 /ServerAssets/kbe
 /ServerAssets/.travis.yml
 /ServerAssets/appveyor.yml
+/ServerAssets/assets/logs
