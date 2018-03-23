@@ -8,6 +8,10 @@
 /Vobeia/Vobeia.userprefs
 *.DS_Store
 *.pyc
+.vscode
+*.csproj
+/Vobeia/Assets/vscode
+/Vobeia/Assets/VSCODE.meta
 /Vobeia/Assets/XLua/Gen
 /Vobeia/Assets/XLua/Gen.meta
 
