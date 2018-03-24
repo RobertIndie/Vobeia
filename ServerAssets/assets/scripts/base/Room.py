@@ -8,7 +8,7 @@ class Room(KBEngine.Entity):
     """
     def __init__(self):
         KBEngine.Entity.__init__(self)
-        INFO_MSG("Init Room %s(%d)" % (self.RoomName,self.RoomID))
+        INFO_MSG("Init Room %s(%d)" % (self.Name,self.ID))
 
     def requestEnterRoom(self,player):
         if not player in self.Players:

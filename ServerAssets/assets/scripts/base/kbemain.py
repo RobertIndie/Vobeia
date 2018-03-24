@@ -18,8 +18,9 @@ def onBaseAppReady(isBootstrap):
 		testLobby = KBEngine.createEntityLocally("Lobby",
 			{
 				"LobbyName":"Origin Server"
-			}
+			},
 		)
+		testLobby.demo_createDemoRoom()
 		KBEngine.globalData["TestLobby"] = testLobby
 
 def onReadyForLogin(isBootstrap):

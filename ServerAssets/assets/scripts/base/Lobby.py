@@ -17,10 +17,22 @@ class Lobby(KBEngine.Entity):
 
         self.tempRoomID = 0
 
+    def demo_createDemoRoom(self):
+        # self.tempRoomID = self.tempRoomID + 1
+        params = {
+            "ID":0,
+            "Name":"Demo",
+            "Lobby":self,
+            "Players":[],
+        }
+        self.rooms.append(KBEngine.createEntityAnywhere("Room",params))
+
     def enterLobby(self,player):
         if player in self.players:
             return
         self.players.append(player)
+        #Demo房间
+        player.requestEnterRoom(0)
 
     def exitLobby(self,player):
         if not player in self.players:
