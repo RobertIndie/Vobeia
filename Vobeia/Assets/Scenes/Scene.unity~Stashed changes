@@ -835,11 +835,20 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD:Vobeia/Assets/Scenes/Scene.unity~Stashed changes
   - component: {fileID: 1134792502}
   - component: {fileID: 1134792504}
   - component: {fileID: 1134792503}
   m_Layer: 5
   m_Name: Checkmark
+=======
+  - component: {fileID: 929306228}
+  - component: {fileID: 929306227}
+  - component: {fileID: 929306226}
+  - component: {fileID: 929306229}
+  m_Layer: 0
+  m_Name: Persistent
+>>>>>>> master:Vobeia/Assets/Scenes/Demo.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -895,8 +904,31 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD:Vobeia/Assets/Scenes/Scene.unity~Stashed changes
   m_GameObject: {fileID: 1134792501}
 --- !u!1 &1214923523
+=======
+  m_GameObject: {fileID: 929306225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 75.70189, y: 23.119936, z: -12.361525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929306229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929306225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3117ec5dfb9c6a44ebdcafe7bdd15535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &943384633
+>>>>>>> master:Vobeia/Assets/Scenes/Demo.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
