@@ -1,71 +1,52 @@
 ﻿using UnityEngine;
 
 public class HexCell : MonoBehaviour {
-	public HexCoordinates coordinates;
-	public Color color;
-}
 
-[System.Serializable]
-public struct HexCoordinates {
+	public HexCoordinates coordinates;
+
+	public Color color;
+
+	public RectTransform uiRect;
+
+	public int Elevation {
+		get {
+			return elevation;
+		}
+		set {
+			elevation = value;
+			Vector3 position = transform.localPosition;
+			position.y = value * HexMetrics.elevationStep;
+			transform.localPosition = position;
+
+			Vector3 uiPosition = uiRect.localPosition;
+			uiPosition.z = elevation * -HexMetrics.elevationStep;
+			uiRect.localPosition = uiPosition;
+		}
+	}
+
+	int elevation;
 
 	[SerializeField]
-	private int x, z;
+	HexCell[] neighbors;
 
-	public int X {
-		get {
-			return x;
-		}
+	public HexCell GetNeighbor (HexDirection direction) {
+		return neighbors[(int)direction];
 	}
 
-	public int Z {
-		get {
-			return z;
-		}
+	public void SetNeighbor (HexDirection direction, HexCell cell) {
+		neighbors[(int)direction] = cell;
+		cell.neighbors[(int)direction.Opposite()] = this;
 	}
 
-	public int Y {
-		get {
-			return -X - Z;
-		}
+	public HexEdgeType GetEdgeType (HexDirection direction) {
+		return HexMetrics.GetEdgeType(
+			elevation, neighbors[(int)direction].elevation
+		);
 	}
 
-	public HexCoordinates (int x, int z) {
-		this.x = x;
-		this.z = z;
-	}
-
-	public static HexCoordinates FromOffsetCoordinates (int x, int z) {
-		return new HexCoordinates(x - z / 2, z);
-	}
-	public override string ToString () {
-		return "(" + X.ToString() + ", " + Y.ToString() + ", " + Z.ToString() + ")";
-	}
-	public string ToStringOnSeparateLines () {
-		return X.ToString() + "\n" + Y.ToString() + "\n" + Z.ToString();
-	}
-	
-	public static HexCoordinates FromPosition (Vector3 position) {
-		float x = position.x / (HexMetrics.innerRadius * 2f);
-		float y = -x;
-		float offset = position.z / (HexMetrics.outerRadius * 3f);
-		x -= offset;
-		y -= offset;
-		int iX = Mathf.RoundToInt(x);
-		int iY = Mathf.RoundToInt(y);
-		int iZ = Mathf.RoundToInt(-x -y);
-		if (iX + iY + iZ != 0) {
-			float dX = Mathf.Abs(x - iX);
-			float dY = Mathf.Abs(y - iY);
-			float dZ = Mathf.Abs(-x -y - iZ);
-
-			if (dX > dY && dX > dZ) {
-				iX = -iY - iZ;
-			}
-			else if (dZ > dY) {
-				iZ = -iX - iY;
-			}
-		}
-
-		return new HexCoordinates(iX, iZ);
+	public HexEdgeType GetEdgeType (HexCell otherCell) {
+		return HexMetrics.GetEdgeType(
+			elevation, otherCell.elevation
+		);
 	}
 }
