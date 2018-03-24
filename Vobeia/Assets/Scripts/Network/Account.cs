@@ -8,7 +8,6 @@
         void requestExitRoom();
         void requestGetRoomInfo();
     }
-    [XLua.LuaCallCSharp]
     public class Account : Entity,AccountInterface
     {
         public static AccountInterface instance;
