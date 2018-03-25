@@ -6,17 +6,49 @@ using System;
 
 public class Login : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    KBEMain kbemain;
+
+    private void Awake()
+    {
+        kbemain = gameObject.GetComponent<KBEMain>();
+    }
+
+    // Use this for initialization
+    void Start () {
         KBEngine.Event.registerOut("onLoginSuccessfully", this, "onLoginSuccessfully");
         KBEngine.Event.registerOut("onLoginFailed", this, "onLoginFailed");
-        requestLogin("Robert1", "123456");
+        StartCoroutine(TryLogin());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    IEnumerator TryLogin()
+    {
+        while(true)
+        {
+            Debug.Log("登录中");
+            try
+            {
+                if (!kbemain.gameapp.networkInterface().valid())
+                {
+                    requestLogin("Robert1", "123456");
+                    break;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch
+            {
+                Debug.LogError("无法连接到服务器，正在尝试重新连接");
+            }
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
 
     public void requestLogin(string name, string password)
     {
